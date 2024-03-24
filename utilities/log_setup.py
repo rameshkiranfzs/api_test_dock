@@ -53,5 +53,3 @@ def getlogger():
     logger.setLevel(logging.DEBUG) # Set the root logger's level to DEBUG
 
     return logger
-
-
