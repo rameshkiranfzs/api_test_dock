@@ -5,6 +5,7 @@ import json
 from utilities import log_setup
 import traceback
 import pytest
+from utilities import data_operator as dop
 logger = log_setup.getlogger()
 '''
 - Create a custom Retry object with dynamic retry logic (max_retries, HTTP status code to retry, HTTPs methods ot retry)
@@ -73,4 +74,24 @@ def run_api(url, payload, headers, request_type=""):
 
     except:
         logger.error("Error occured:" +traceback.format_exc())
+
+
+
+def create_payload(payload, request_key_value):
+    '''
+    Method to replace the incoming Dictonary values to JSON request.
+    payload - json - Dict
+    request_key_value - replaceable Key-Value pairs
+    '''
+    if isinstance(payload, dict):
+        for key, value in payload.items():
+            if isinstance(value, dict) or isinstance(value, list):
+                create_payload(value, request_key_value)
+            elif key in request_key_value:
+                payload[key] = request_key_value[key]
+    elif isinstance(payload, list):
+        for i in range(len(payload)):
+            if isinstance(payload[i], dict) or isinstance(payload[i], list):
+                create_payload(payload[i], request_key_value)
+    return payload
 
