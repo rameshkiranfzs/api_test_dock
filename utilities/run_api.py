@@ -83,6 +83,7 @@ def create_payload(payload, request_key_value):
     payload - json - Dict
     request_key_value - replaceable Key-Value pairs
     '''
+
     if isinstance(payload, dict):
         for key, value in payload.items():
             if isinstance(value, dict) or isinstance(value, list):

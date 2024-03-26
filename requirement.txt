@@ -3,3 +3,4 @@ pandas==2.2.1
 pytest==8.1.1
 requests==2.31.0
 jsonlib==1.6.1
+pytest-vscodedebug==0.1.0
