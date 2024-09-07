@@ -1,0 +1,12 @@
+{
+	"name": "githubcode",
+	"properties": {
+		"annotations": [],
+		"type": "HttpServer",
+		"typeProperties": {
+			"url": "https://github.com/rameshkiranfzs/full_stack_automation_python",
+			"enableServerCertificateValidation": true,
+			"authenticationType": "Anonymous"
+		}
+	}
+}
