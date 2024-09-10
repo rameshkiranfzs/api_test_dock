@@ -1,0 +1,133 @@
+2024-09-10 20:06:15,569 - ERROR - Traceback (most recent call last):
+  File "c:\my_repository\api_test_dock\database\db_operations.py", line 31, in get_db_connection
+    connection = mysql.connector.connect(host=host,port=port,user=user,password=password,database=database)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\my_repository\api_test_dock\.venv\Lib\site-packages\mysql\connector\__init__.py", line 179, in connect
+    return MySQLConnection(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\my_repository\api_test_dock\.venv\Lib\site-packages\mysql\connector\connection.py", line 95, in __init__
+    self.connect(**kwargs)
+  File "c:\my_repository\api_test_dock\.venv\Lib\site-packages\mysql\connector\abstracts.py", line 716, in connect
+    self._open_connection()
+  File "c:\my_repository\api_test_dock\.venv\Lib\site-packages\mysql\connector\connection.py", line 208, in _open_connection
+    self._do_auth(self._user, self._password,
+  File "c:\my_repository\api_test_dock\.venv\Lib\site-packages\mysql\connector\connection.py", line 137, in _do_auth
+    packet = self._protocol.make_auth(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\my_repository\api_test_dock\.venv\Lib\site-packages\mysql\connector\protocol.py", line 99, in make_auth
+    packet += self._auth_response(client_flags, username, password,
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\my_repository\api_test_dock\.venv\Lib\site-packages\mysql\connector\protocol.py", line 58, in _auth_response
+    auth = get_auth_plugin(auth_plugin)(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\my_repository\api_test_dock\.venv\Lib\site-packages\mysql\connector\authentication.py", line 190, in get_auth_plugin
+    raise errors.NotSupportedError(
+mysql.connector.errors.NotSupportedError: Authentication plugin 'caching_sha2_password' is not supported
+
+2024-09-10 20:06:15,571 - ERROR - Traceback (most recent call last):
+  File "c:\my_repository\api_test_dock\database\db_operations.py", line 23, in get_alias_connection
+    return get_db_connection(host,port,user,password,database)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\my_repository\api_test_dock\database\db_operations.py", line 31, in get_db_connection
+    connection = mysql.connector.connect(host=host,port=port,user=user,password=password,database=database)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\my_repository\api_test_dock\.venv\Lib\site-packages\mysql\connector\__init__.py", line 179, in connect
+    return MySQLConnection(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\my_repository\api_test_dock\.venv\Lib\site-packages\mysql\connector\connection.py", line 95, in __init__
+    self.connect(**kwargs)
+  File "c:\my_repository\api_test_dock\.venv\Lib\site-packages\mysql\connector\abstracts.py", line 716, in connect
+    self._open_connection()
+  File "c:\my_repository\api_test_dock\.venv\Lib\site-packages\mysql\connector\connection.py", line 208, in _open_connection
+    self._do_auth(self._user, self._password,
+  File "c:\my_repository\api_test_dock\.venv\Lib\site-packages\mysql\connector\connection.py", line 137, in _do_auth
+    packet = self._protocol.make_auth(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\my_repository\api_test_dock\.venv\Lib\site-packages\mysql\connector\protocol.py", line 99, in make_auth
+    packet += self._auth_response(client_flags, username, password,
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\my_repository\api_test_dock\.venv\Lib\site-packages\mysql\connector\protocol.py", line 58, in _auth_response
+    auth = get_auth_plugin(auth_plugin)(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\my_repository\api_test_dock\.venv\Lib\site-packages\mysql\connector\authentication.py", line 190, in get_auth_plugin
+    raise errors.NotSupportedError(
+mysql.connector.errors.NotSupportedError: Authentication plugin 'caching_sha2_password' is not supported
+
+2024-09-10 20:06:15,574 - ERROR - Traceback (most recent call last):
+  File "c:\my_repository\api_test_dock\apis\create_categories_apis.py", line 17, in get_all_categories
+    conn = db.get_alias_connection('store_db')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\my_repository\api_test_dock\database\db_operations.py", line 23, in get_alias_connection
+    return get_db_connection(host,port,user,password,database)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\my_repository\api_test_dock\database\db_operations.py", line 31, in get_db_connection
+    connection = mysql.connector.connect(host=host,port=port,user=user,password=password,database=database)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\my_repository\api_test_dock\.venv\Lib\site-packages\mysql\connector\__init__.py", line 179, in connect
+    return MySQLConnection(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\my_repository\api_test_dock\.venv\Lib\site-packages\mysql\connector\connection.py", line 95, in __init__
+    self.connect(**kwargs)
+  File "c:\my_repository\api_test_dock\.venv\Lib\site-packages\mysql\connector\abstracts.py", line 716, in connect
+    self._open_connection()
+  File "c:\my_repository\api_test_dock\.venv\Lib\site-packages\mysql\connector\connection.py", line 208, in _open_connection
+    self._do_auth(self._user, self._password,
+  File "c:\my_repository\api_test_dock\.venv\Lib\site-packages\mysql\connector\connection.py", line 137, in _do_auth
+    packet = self._protocol.make_auth(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\my_repository\api_test_dock\.venv\Lib\site-packages\mysql\connector\protocol.py", line 99, in make_auth
+    packet += self._auth_response(client_flags, username, password,
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\my_repository\api_test_dock\.venv\Lib\site-packages\mysql\connector\protocol.py", line 58, in _auth_response
+    auth = get_auth_plugin(auth_plugin)(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\my_repository\api_test_dock\.venv\Lib\site-packages\mysql\connector\authentication.py", line 190, in get_auth_plugin
+    raise errors.NotSupportedError(
+mysql.connector.errors.NotSupportedError: Authentication plugin 'caching_sha2_password' is not supported
+
+2024-09-10 20:06:15,575 - ERROR - Exception on /categories [GET]
+Traceback (most recent call last):
+  File "c:\my_repository\api_test_dock\.venv\Lib\site-packages\flask\app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\my_repository\api_test_dock\.venv\Lib\site-packages\flask\app.py", line 883, in full_dispatch_request
+    return self.finalize_request(rv)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\my_repository\api_test_dock\.venv\Lib\site-packages\flask\app.py", line 902, in finalize_request
+    response = self.make_response(rv)
+               ^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\my_repository\api_test_dock\.venv\Lib\site-packages\flask\app.py", line 1174, in make_response
+    raise TypeError(
+TypeError: The view function for 'get_all_categories' did not return a valid response. The function either returned None or ended without a return statement.
+2024-09-10 20:06:15,578 - INFO - 127.0.0.1 - - [10/Sep/2024 20:06:15] "[35m[1mGET /categories HTTP/1.1[0m" 500 -
+2024-09-10 20:06:42,695 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.40:5000
+2024-09-10 20:06:42,696 - INFO - [33mPress CTRL+C to quit[0m
+2024-09-10 20:07:06,248 - ERROR - Traceback (most recent call last):
+  File "c:\my_repository\api_test_dock\database\db_operations.py", line 31, in get_db_connection
+    connection = mysql.connector.connect(host=host,port=port,user=user,password=password,database=database)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\my_repository\api_test_dock\.venv\Lib\site-packages\mysql\connector\__init__.py", line 179, in connect
+    return MySQLConnection(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\my_repository\api_test_dock\.venv\Lib\site-packages\mysql\connector\connection.py", line 95, in __init__
+    self.connect(**kwargs)
+  File "c:\my_repository\api_test_dock\.venv\Lib\site-packages\mysql\connector\abstracts.py", line 716, in connect
+    self._open_connection()
+  File "c:\my_repository\api_test_dock\.venv\Lib\site-packages\mysql\connector\connection.py", line 208, in _open_connection
+    self._do_auth(self._user, self._password,
+  File "c:\my_repository\api_test_dock\.venv\Lib\site-packages\mysql\connector\connection.py", line 137, in _do_auth
+    packet = self._protocol.make_auth(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\my_repository\api_test_dock\.venv\Lib\site-packages\mysql\connector\protocol.py", line 99, in make_auth
+    packet += self._auth_response(client_flags, username, password,
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\my_repository\api_test_dock\.venv\Lib\site-packages\mysql\connector\protocol.py", line 58, in _auth_response
+    auth = get_auth_plugin(auth_plugin)(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\my_repository\api_test_dock\.venv\Lib\site-packages\mysql\connector\authentication.py", line 190, in get_auth_plugin
+    raise errors.NotSupportedError(
+mysql.connector.errors.NotSupportedError: Authentication plugin 'caching_sha2_password' is not supported
+

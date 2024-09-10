@@ -2,5 +2,5 @@ logging==0.4.9.6
 pandas==2.2.1
 pytest==8.1.1
 requests==2.31.0
-jsonlib==1.6.1
 pytest-vscodedebug==0.1.0
+Flask==3.0.3
